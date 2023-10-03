@@ -1,0 +1,91 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "Test GLFW",
+			"command": "C:\\MinGW\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+                "-I${workspaceRoot}/include/",
+                "-L${workspaceRoot}/lib",
+				"${workspaceRoot}/tests/test_glfw.cpp",
+				"-o",
+				"${workspaceRoot}/test_glfw.exe",
+				"${workspaceRoot}/include/glad_gl.c",
+				"-lglfw3",
+				"-lopengl32",
+				"-lgdi32"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\MinGW\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "Test Imgui",
+			"command": "C:\\MinGW\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+                "-I${workspaceRoot}/include/",
+                "-L${workspaceRoot}/lib",
+				"${workspaceRoot}/tests/test_imgui.cpp",
+				"-o",
+				"${workspaceRoot}/test_imgui.exe",
+				"${workspaceRoot}/include/glad_gl.c",
+				// "include/imgui/imgui_impl_glfw.cpp ",
+				// "include/imgui/imgui_impl_opengl3.cpp ",
+				"${workspaceRoot}/include/imgui/imgui*.cpp",
+				"-lglfw3",
+				"-lopengl32",
+				"-lgdi32",
+				"-lshell32"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\MinGW\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "Test Engine",
+			"command": "C:\\MinGW\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+                "-I${workspaceRoot}/include/",
+                "-L${workspaceRoot}/lib",
+				"${workspaceRoot}/tests/test_engine.cpp",
+				"-o",
+				"${workspaceRoot}/test_engine.exe",
+				"${workspaceRoot}/include/glad_gl.c",
+				// "include/imgui/imgui_impl_glfw.cpp ",
+				// "include/imgui/imgui_impl_opengl3.cpp ",
+				"${workspaceRoot}/include/imgui/imgui*.cpp",
+				"-lglfw3",
+				"-lopengl32",
+				"-lgdi32",
+				"-lshell32"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\MinGW\\bin\\g++.exe"
+		}
+	]
+}
